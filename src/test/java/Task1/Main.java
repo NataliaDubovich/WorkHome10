@@ -5,14 +5,13 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Scanner;
 import java.util.regex.Pattern;
-//public class PhoneNumberValidator{
 
 
 public class Main {
     private static final Pattern PATTERN1 = Pattern.compile("^\\(\\d{3}\\) \\d{3}-\\d{4}$");
     private static final Pattern PATTERN2 = Pattern.compile("^\\d{3}-\\d{3}-\\d{4}$");
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         File file = new File("file.txt");
         if (file.exists()) {
             try (FileInputStream fIs = new FileInputStream(file);
